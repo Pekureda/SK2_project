@@ -35,7 +35,7 @@ unsigned int cmn::getDataSize(int connection_socket_descriptor) {
     return result;
 }
 
-// std::string cmn::readData(int connection_socket_descriptor, unsigned int data_size) { // string jest zwracany ku chwale c++
+// std::string cmn::readData(int connection_socket_descriptor, unsigned int data_size) {
 //     std::string data(data_size, 0);
 //     unsigned int left = data_size;
 //     if (DEBUG) {
@@ -76,7 +76,7 @@ std::string cmn::readData(int connection_socket_descriptor) {
         //     exit(-1);
         // }
         /*else*/ if (cread <= 0) {
-            // Prawdopodobnie zerwanie połączenia; nie powinno być innego powodu
+            // Prawdopodobnie zerwanie połączenia
             data = "disconnect\n";
             break;
         }
